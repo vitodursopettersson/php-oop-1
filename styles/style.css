@@ -1,0 +1,59 @@
+* {
+    background-color: #040404;
+}
+
+.logo {
+    width: 180px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.100);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.400);
+}
+
+.search-bar input {
+    border: none;
+    width: 60px
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.400);
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.profile {
+    height: 42px;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.100);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.genre-link a:hover {
+    color: #fff !important;
+}
+
+.film-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}

@@ -1,33 +1,30 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-// Classe
-class Movie
-{
-    public $name;
-    public $year;
-    public $running_time_minutes;
-    public $running_time_hour_minutes;
-    public $info;
-    public $category;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolflix</title>
 
-    public function __construct($_name, $_year, $_running_time_minutes, $_info)
-    {
-        $this->name = $_name;
-        $this->year = $_year;
-        $this->running_time_minutes = $_running_time_minutes;
-        $this->info = $_info;
-    }
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    static function getRunningTimeHourMinutes($minutes)
-    {
-        $hour = floor($minutes / 60);
-        $minutes_remaining = $minutes % 60;
+    <!-- Link FontAwesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        return ["hour" => $hour, "minutes" => $minutes_remaining];
-    }
-};
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles/style.css">
 
-// Istanza
-$the_game_nessuna_regola = new Movie('The Game Nessuna Regola', '1997', '128', 'La vita di un consulente finanziario precipita nel pericolo e nella paranoia dopo lo strano regalo di compleanno del fratello: la partecipazione a un gioco misterioso.');
-$the_game_nessuna_regola->$category = ['Thriller', 'Drammatico', 'Premiato'];
-$the_game_nessuna_regola->running_time_hour_minutes = Movie::getRunningTimeHourMinutes(128);
+</head>
+
+<body>
+
+    <?php require_once __DIR__ . '/Components/header.php'; ?>
+
+    <div id="app">
+        <?php require_once __DIR__ . '/Components/main.php'; ?>
+    </div>
+
+</body>
+
+</html>
